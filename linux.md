@@ -93,7 +93,7 @@ Um terminal Linux, também chamado de shell ou linha de comando, fornece uma int
 <p>Emuladores de terminal são frequentemente usados para isso. A emulação de terminal é um software que emula a função de um terminal. Ele permite o uso de programas baseados em texto dentro de uma interface gráfica do usuário (GUI). Existem muitos emuladores de terminal diferentes, como o GNOME Terminal, o XFCE4 Terminal, o XTerm e muitos outros. Existem também as chamadas interfaces de linha de comando que são executadas como terminais adicionais em um terminal e, portanto, são multiplexadores. Esses multiplexadores incluem Tmux, GNU Screen e outros. Em suma, um terminal serve como uma interface para o interpretador de shell.
 
 Emuladores de terminal e multiplexadores são extensões benéficas para o terminal. Eles nos fornecem diferentes métodos e funções para trabalhar com o terminal, como dividir o terminal em uma janela, trabalhar em vários diretórios, criar diferentes espaços de trabalho e muito mais. Um exemplo do uso de tal multiplexador chamado Tmux poderia ser algo assim:</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/tmux.png">
+<img src="./imagens/tmux.png">
 
 **Shell**
 <p>O shell mais comumente usado no Linux é o Bourne-Again Shell (BASH) e faz parte do projeto GNU. Tudo o que fazemos através da GUI podemos fazer com o shell. O shell nos dá muito mais possibilidades de interagir com programas e processos para obter informações mais rapidamente. Além disso, muitos processos podem ser facilmente automatizados com scripts menores ou maiores que tornam o trabalho manual muito mais fácil. Além do Bash, também existem outros como: Tcsh/Csh, Ksh, Zsh, Fish shell.</p>
@@ -101,13 +101,13 @@ Emuladores de terminal e multiplexadores são extensões benéficas para o termi
 **Descrição do Prompt**
 <p>O prompt bash é fácil de entender e, por padrão, inclui informações como o usuário, o nome do host e o diretório de trabalho atual. O formato pode ter a seguinte aparência:
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/Linux Fundamentals.png">
+<img src="./imagens/Linux Fundamentals.png">
 <p>O diretório base de um usuário é marcado com um til e é a pasta padrão quando fazemos login.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/Linux Fundamentals1.png">
+<img src="./imagens/Linux Fundamentals1.png">
 <p>O cifrão, neste caso, significa um usuário. Assim que efetuamos login como root, o caractere muda para um hash e tem a seguinte aparência:
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/Linux Fundamentals2.png">
+<img src="./imagens/Linux Fundamentals2.png">
 <p>Vimos aqui o mesmo que quando trabalhamos na GUI do Windows. Estamos logados como um usuário em um computador com um nome específico, e sabemos em qual diretório estamos quando navegamos pelo nosso sistema. O prompt Bash também pode ser personalizado e alterado para nossas próprias necessidades. O ajuste do prompt bash está fora do escopo deste módulo. No entanto, podemos olhar para o bashrcgenerator  e powerline  o que nos dá a possibilidade de adaptar o nosso pronto às nossas necessidades.
 </p>
 
@@ -158,7 +158,7 @@ Suponha que desejemos imprimir a versão do kernel para procurar possíveis expl
 Com esta informação, poderíamos ir e procurar por "4.15.0-99-generic exploit", e o primeiro resultado imediatamente nos parece útil.
 É altamente recomendável estudar os comandos e entender para que servem e quais informações eles podem fornecer. Embora um pouco tedioso, podemos aprender muito estudando as manpages para comandos comuns. Podemos até descobrir coisas que nem sabíamos que eram possíveis com um determinado comando. Essas informações não são usadas apenas para trabalhar com Linux. No entanto, ele também será usado posteriormente para descobrir vulnerabilidades e configurações incorretas no sistema Linux que podem contribuir para o escalonamento de privilégios.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux.png">
+<img src="./imagens/linux.png">
 
 [Exploit](https://www.exploit-db.com/exploits/47163)
 
@@ -227,21 +227,21 @@ Cada distribuição Linux usa repositórios de software que são atualizados com
 
 O APT usa um banco de dados chamado cache do APT. Isso é usado para fornecer informações sobre pacotes instalados em nosso sistema off-line. Podemos pesquisar o cache APT, por exemplo, para encontrar todos os pacotes relacionados ao Impacket.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux1.png">
+<img src="./imagens/linux1.png">
 <p>Podemos então ver informações adicionais sobre um pacote.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux2.png">
+<img src="./imagens/linux2.png">
 <p>Também podemos listar todos os pacotes instalados.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux3.png">
+<img src="./imagens/linux3.png">
 <p>Se estivermos faltando alguns pacotes, podemos procurá-lo e instalá-lo usando o seguinte comando.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux4.png">
+<img src="./imagens/linux4.png">
 
 **DPKG**
 <p>Também podemos baixar os programas e ferramentas dos repositórios separadamente. Neste exemplo, baixamos 'strace' para o Ubuntu 18.04 LTS.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux5.png">
+<img src="./imagens/linux5.png">
 <p>Além disso, agora podemos usar o apt e o dpkg para instalar o pacote. Como já trabalhamos com o apt, vamos nos voltar para o dpkg no próximo exemplo.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux6.png">
+<img src="./imagens/linux6.png">
 <p>Com isso, já instalamos a ferramenta e podemos testar se ela funciona corretamente.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux7.png">
+<img src="./imagens/linux7.png">
 
 ## Gerenciamento de Serviços e Processos
 <p>Em geral, existem dois tipos de serviços: internos, os serviços relevantes que são necessários na inicialização do sistema, que, por exemplo, executam tarefas relacionadas ao hardware, e serviços que são instalados pelo usuário, que geralmente incluem todos os serviços do servidor. Esses serviços são executados em segundo plano sem qualquer interação do usuário. Estes também são chamados de daemons e são identificados pela letra 'd' no final do nome do programa, por exemplo, sshd ou systemd.
@@ -254,16 +254,16 @@ Além do systemctl, também podemos usar update-rc.d para gerenciar links de scr
 **Systemctl**
 <p>Depois de instalar o OpenSSH em nossa VM, podemos iniciar o serviço com o seguinte comando:</p><code>systemctl start ssh</code>
 <p>Depois de iniciarmos o serviço, agora podemos verificar se ele é executado sem erros</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux8.png">
+<img src="./imagens/linux8.png">
 <p>Para adicionar OpenSSH ao script SysV para dizer ao sistema para executar este serviço após a inicialização, podemos vinculá-lo com o seguinte comando:</p>
 <code>systemctl enable ssh</code>
 <p>Uma vez que reinicializamos o sistema, o servidor OpenSSH será executado automaticamente. Podemos verificar isso com uma ferramenta chamada ps.</p>
 <code>ps -aux | grep ssh</code>
 <p>Também podemos usar systemctl para listar todos os serviços.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux9.png">
+<img src="./imagens/linux9.png">
 <p>É bem possível que os serviços não sejam iniciados devido a um erro. Para ver o problema, podemos usar a ferramenta journalctl para visualizar os logs.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux10.png">
+<img src="./imagens/linux10.png">
 
 ## Matar um processo
 <p>Um processo pode estar nos seguintes estados:
@@ -302,17 +302,17 @@ Sigtstp: Enviado quando um usuário pressiona [Ctrl] + Z para solicitar a suspen
 
 A diferença entre eles está no tratamento dos processos anteriores e depende se o processo anterior foi concluído com sucesso ou com erros. O ponto e vírgula (;) é um separador de comandos e executa os comandos ignorando os resultados e erros dos comandos anteriores.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux11.png">
+<img src="./imagens/linux11.png">
 <p>Por exemplo, se executarmos o mesmo comando, mas o substituirmos em segundo lugar, o comando ls por um arquivo que não existe, obteremos um erro e o terceiro comando será executado no entanto.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux12.png">
+<img src="./imagens/linux12.png">
 <p>No entanto, parece diferente se usarmos os caracteres duplos E (&&) para executar os comandos um após o outro. Se houver um erro em um dos comandos, os seguintes não serão mais executados e todo o processo será interrompido.</p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux13.png">
+<img src="./imagens/linux13.png">
 <p>Os pipes (|) dependem não apenas da operação correta e livre de erros dos processos anteriores, mas também dos resultados dos processos anteriores. Trataremos dos pipes mais adiante na seção Descritores e redirecionamentos de arquivo.</p>
 
 ## Trabalhando com Web Services
 <p>Outro componente essencial é a comunicação com os servidores web. Existem muitas maneiras diferentes de configurar servidores web em sistemas operacionais Linux. Um dos servidores web mais utilizados e difundidos, além do IIS e Nginx, é o Apache. Para um servidor web Apache, podemos usar módulos apropriados, que podem criptografar a comunicação entre o navegador e o servidor web (mod_ssl), usar como um servidor proxy (mod_proxy) ou executar manipulações complexas de dados de cabeçalho HTTP (mod_headers) e URLs (mod_rewrite). O Apache oferece a possibilidade de criar páginas da Web dinamicamente usando linguagens de script do lado do servidor. As linguagens de script comumente usadas são PHP, Perl ou Ruby. Outras linguagens são Python, JavaScript, Lua e.NET, que podem ser usadas para isso. Podemos instalar o servidor web Apache com o seguinte comando.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux14.png">
+<img src="./imagens/linux14.png">
 <p>Depois de iniciá-lo, podemos navegar usando nosso navegador até a página padrão (http://localhost).</p>
 
 **Curl**
@@ -322,12 +322,12 @@ A diferença entre eles está no tratamento dos processos anteriores e depende s
 **Wget**
 <p>Uma alternativa ao enrolamento é a ferramenta wget. Com esta ferramenta, podemos baixar arquivos de servidores FTP ou HTTP diretamente do terminal e serve como um bom gerenciador de downloads. Se usarmos o wget da mesma maneira, a diferença para o curl é que o conteúdo do site é baixado e armazenado localmente, como mostrado no exemplo a seguir
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux15.png">
+<img src="./imagens/linux15.png">
 
 **Python 3**
 <p>Outra opção que é frequentemente usada quando se trata de transferência de dados é o uso do Python 3. Nesse caso, o diretório raiz do servidor Web é onde o comando é executado para iniciar o servidor. Para este exemplo, estamos em um diretório onde o WordPress está instalado e contém um "readme.html". Agora, vamos iniciar o servidor web Python 3 e ver se podemos acessá-lo usando o navegador.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux16.png">
+<img src="./imagens/linux16.png">
 
 ## Nabegação
 <p>Uma das melhores maneiras de aprender algo novo é experimentá-lo. Aqui abordamos as seções sobre como navegar pelo Linux, criar, mover, editar e excluir arquivos e pastas, encontrá-los no sistema operacional, diferentes tipos de redirecionamentos e quais são os descritores de arquivos. Em seguida, encontraremos alguns atalhos que facilitarão nosso trabalho com o shell. Comecemos pela navegação. Antes de nos movermos pelo sistema, temos que descobrir em qual diretório estamos. Podemos descobrir onde estamos com o comando <code>pwd</code>
@@ -357,30 +357,30 @@ Em seguida, vamos trabalhar com arquivos e diretórios e aprender a criar, renom
 mkdir diretório.
 
 Cria um arquivo vazio
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux17.png">
+<img src="./imagens/linux17.png">
 Criar um diretório
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux18.png">
+<img src="./imagens/linux18.png">
 Podemos querer ter diretórios específicos no diretório, e seria muito demorado criar esse comando para cada diretório. O comando mkdir tem uma opção marcada -p para adicionar diretórios pai.
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux19.png">
+<img src="./imagens/linux19.png">
 Podemos examinar toda a estrutura depois de criar os diretórios pai com o comando <code>tree</code>.
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux20.png">
+<img src="./imagens/linux20.png">
 Com o comando <code>mv</code> , podemos mover e também renomear arquivos e diretórios. A sintaxe para isso tem esta aparência:
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux21.png">
+<img src="./imagens/linux21.png">
 Primeiro, vamos renomear as informações do arquivo.txt para informações.txt e, em seguida, movê-lo para o diretório Storage.
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux22.png">
+<img src="./imagens/linux22.png">
 Agora vamos criar um arquivo chamado readme.txt no diretório atual e, em seguida, copiar as informações dos arquivos.txt e leiame.txt para o diretório Storage/.
 <code>Touch</code> readme.txt
 
 Mover arquivos para um diretório específico
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux23.png">
+<img src="./imagens/linux23.png">
 Copiar readme.txt
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux24.png"></p>
+<img src="./imagens/linux24.png"></p>
 
 ## Editando Arquivos
 <p>Há várias maneiras de editar um arquivo. Um dos editores de texto mais comuns para isso é Vi e Vim. Mais raramente, há o editor Nano. Vamos primeiro lidar com o editor Nano aqui, pois é um pouco mais fácil de entender. Podemos criar um novo arquivo diretamente com o editor Nano, especificando o nome do arquivo diretamente como o primeiro parâmetro. Nesse caso, criamos um novo arquivo chamado notes.txt
 
 Exemplo: <code>nano</code> notes.txt
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux25.png">
+<img src="./imagens/linux25.png">
 Acima vemos duas linhas com breves descrições. O acento circunflexo (^) significa a nossa tecla "[CTRL]". Por exemplo, se pressionarmos [CTRL + W], uma linha "Pesquisar:" aparecerá na parte inferior do editor, onde podemos inserir a palavra ou palavras que estamos procurando. Se agora procurarmos a palavra "nós" e pressionarmos [ENTER], o cursor se moverá para a primeira palavra que corresponder.
 
 Para saltar para a próxima partida com o cursor, pressionamos [CTRL + W] novamente e confirmamos com [ENTER] sem nenhuma informação adicional.
@@ -394,13 +394,13 @@ Depois de salvar o arquivo, podemos deixar o editor com [CTRL + X].</p>
 
 **Wich**
 Uma das ferramentas comuns é which. Essa ferramenta retorna o caminho para o arquivo ou link que deve ser executado. Isso nos permite determinar se programas específicos, como cURL, netcat, wget, python, gcc, estão disponíveis no sistema operacional. Vamos usá-lo para procurar Python em nossa instância interativa.
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux26.png">
+<img src="./imagens/linux26.png">
 Se o programa que pesquisamos não existir, nenhum resultado será exibido.
 
 **Find**
 Outra ferramenta útil é find. Além da função para localizar arquivos e pastas, esta ferramenta também contém a função para filtrar os resultados. Podemos usar parâmetros de filtro como o tamanho do arquivo ou a data. Também podemos especificar se pesquisamos apenas arquivos ou pastas.
 Vejamos um exemplo de como seria tal comando com várias opções.
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux27.png">
+<img src="./imagens/linux27.png">
 <code>-type f</code> Assim, definimos o tipo do objeto pesquisado. Neste caso, 'f' significa 'arquivo'.
 
 <code>-name *.conf Com '-name'</code> indicamos o nome do arquivo que estamos procurando. O asterisco (*) significa 'todos' os arquivos com a extensão '.conf'.
@@ -421,7 +421,7 @@ Levará muito tempo para pesquisar em todo o sistema por nossos arquivos e diret
 
 Se agora pesquisarmos todos os arquivos com a extensão ".conf", você descobrirá que essa pesquisa produz resultados muito mais rápidos do que usando find.
 </p>
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux28.png">
+<img src="./imagens/linux28.png">
 
 ## Descritores e redirecionamentos de arquivo
 <p>Um descritor de arquivo (FD) em sistemas operacionais Unix/Linux é um indicador de conexão mantido pelo kernel para executar operações de Entrada/Saída (E/S). Em sistemas operacionais baseados no Windows, ele é chamado de filehandle. É a conexão (geralmente a um arquivo) do sistema operacional para executar operações de E/S (Entrada/Saída de Bytes). Por padrão, os três primeiros descritores de arquivo no Linux são:
@@ -437,7 +437,7 @@ Se agora pesquisarmos todos os arquivos com a extensão ".conf", você descobrir
 
 Vejamos um exemplo com cat. Ao executar o cat, damos ao programa em execução nossa entrada padrão (STDIN - FD 0), marcada em verde, onde neste caso "ALGUMA ENTRADA" é. Assim que confirmamos nossa entrada com [ENTER], ela é retornada ao terminal como saída padrão (STDOUT - FD 1), marcada em vermelho.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux29.png">
+<img src="./imagens/linux29.png">
 
 **STDOUT and STDERR**
 
@@ -445,49 +445,49 @@ No próximo exemplo, usando o comando find, veremos a saída padrão (STDOUT - F
 Find etc/ -name shadow.
 Nesse caso, o erro é marcado e exibido com "Permissão negada". Podemos verificar isso redirecionando o descritor de arquivo para os erros (FD 2 - STDERR) para "/dev/null". Dessa forma, redirecionamos os erros resultantes para o "dispositivo nulo", que descarta todos os dados.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux30.png">
+<img src="./imagens/linux30.png">
 
 **Redirecionar STDOUT para um arquivo**
 
 Agora podemos ver que todos os erros (STDERR) apresentados anteriormente com "Permissão negada" não são mais exibidos. O único resultado que vemos agora é a saída padrão (STDOUT), que também podemos redirecionar para um arquivo com os resultados do nome.txt que só conterá a saída padrão sem os erros padrão.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux31.png">
+<img src="./imagens/linux31.png">
 
 **Redirecionar STDOUT e STDERR para arquivos separados**
 
 Devemos ter notado que não usamos um número antes do sinal maior que (>) no último exemplo. Isso ocorre porque redirecionamos todos os erros padrão para o "dispositivo nulo" antes, e a única saída que obtemos é a saída padrão (FD 1 - STDOUT). Para tornar isso mais preciso, redirecionaremos o erro padrão (FD 2 - STDERR) e a saída padrão (FD 1 - STDOUT) para arquivos diferentes.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux32.png">
+<img src="./imagens/linux32.png">
 
 **Redirecionar STDIN**
 
 Como já vimos, em combinação com os descritores de arquivo, podemos redirecionar erros e saída com caractere maior que (>). Isso também funciona com o sinal inferior(<).No entanto, o sinal inferior serve como entrada padrão (FD 0 - STDIN). Esses caracteres podem ser vistos como "direção" na forma de uma seta que nos diz "de onde" e "para onde" os dados devem ser redirecionados. Usamos o comando cat para usar o conteúdo do arquivo "stdout.txt" como STDIN.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux33.png">
+<img src="./imagens/linux33.png">
 
 **Redirecionar STDOUT e Acrescentar a um arquivo**
 
 Quando usamos o sinal maior que (>) para redirecionar nosso STDOUT, um novo arquivo é criado automaticamente se ainda não existir. Se esse arquivo existir, ele será substituído sem pedir confirmação. Se quisermos acrescentar STDOUT ao nosso arquivo existente, podemos usar o sinal de duplo maior que (>>).
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux34.png">
+<img src="./imagens/linux34.png">
 
 **Redirecionar fluxo STDIN para um arquivo**
 
 Também podemos usar os caracteres duplos inferiores («) para adicionar nossa entrada padrão por meio de um fluxo. Podemos usar a chamada função End-Of-File (EOF) de um arquivo de sistema Linux, que define o fim da entrada. No próximo exemplo, usaremos o comando cat para ler nossa entrada de streaming através do fluxo e direcioná-la para um arquivo chamado "stream.txt".
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux35.png">
+<img src="./imagens/linux35.png">
 
 **Pipes**
 
 Outra maneira de redirecionar o STDOUT é usar pipes (|). Estes são úteis quando queremos usar o STDOUT de um programa para ser processado por outro. Uma das ferramentas mais utilizadas é o grep, que usaremos no próximo exemplo. Grep é usado para filtrar STDOUT de acordo com o padrão que definimos. No próximo exemplo, usamos o comando find para procurar todos os arquivos no diretório "/etc/" com uma extensão ".conf". Quaisquer erros são redirecionados para o "dispositivo nulo" (/dev/null). Usando grep, filtramos os resultados e especificamos que apenas as linhas que contêm o padrão "systemd" devem ser exibidas.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux36.png">
+<img src="./imagens/linux36.png">
 
 ## Filtrar Conteúdos
 
 Na última seção, aprendemos sobre os redirecionamentos que podemos usar para redirecionar os resultados de um programa para outro para processamento. Para ler arquivos, não precisamos necessariamente usar um editor para isso. Existem duas ferramentas chamadas <code>more e less</code>, que são muito idênticas. Estes são pagers fundamentais que nos permitem percorrer o arquivo em uma exibição interativa. Vejamos alguns exemplos.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux37.png">
+<img src="./imagens/linux37.png">
 
 Com a tecla [Q], podemos finalizar. Notaremos que a saída permanece no terminal.
 
@@ -495,7 +495,7 @@ Com a tecla [Q], podemos finalizar. Notaremos que a saída permanece no terminal
 
 Se agora dermos uma olhada na ferramenta less, notaremos na página do manual que ela contém muito mais recursos do que more.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux38.png">
+<img src="./imagens/linux38.png">
 
 Ao fechar less com a tecla [Q], notaremos que a saída que vimos, ao contrário de more, não permanece no terminal.
 
@@ -503,19 +503,19 @@ Ao fechar less com a tecla [Q], notaremos que a saída que vimos, ao contrário 
 
 Às vezes, só estaremos interessados em questões específicas no início do arquivo ou no final. Se quisermos apenas obter as primeiras linhas do arquivo, podemos usar o head da ferramenta. Por padrão, o <code>head</code> imprime as primeiras dez linhas do arquivo ou entrada fornecidos, se não for especificado de outra forma.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux39.png">
+<img src="./imagens/linux39.png">
 
 **Tail**
 
 Se quisermos ver apenas as últimas partes de um arquivo ou resultados, podemos usar a contraparte do head chamada tail, que retorna as últimas dez linhas.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux40.png">
+<img src="./imagens/linux40.png">
 
 **Sort**
 
 Dependendo de quais resultados e arquivos são tratados, eles raramente são classificados. Muitas vezes, é necessário classificar os resultados desejados em ordem alfabética ou numérica para obter uma visão geral melhor. Para isso, podemos usar uma ferramenta chamada <code>sort</code>.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux41.png">
+<img src="./imagens/linux41.png">
 
 Como podemos ver agora, a saída não começa mais com root, mas agora é classificada em ordem alfabética.
 
@@ -523,31 +523,31 @@ Como podemos ver agora, a saída não começa mais com root, mas agora é classi
 
 Mais frequentemente, pesquisaremos apenas resultados específicos que contenham padrões que definimos. Uma das ferramentas mais utilizadas para isso é o <code>grep</code>, que oferece muitos recursos diferentes. Assim, podemos procurar usuários que tenham o shell padrão "/bin/bash" definido como exemplo.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux42.png">
+<img src="./imagens/linux42.png">
 
 **Cut**
 
 Resultados específicos com caracteres diferentes podem ser separados como delimitadores. Aqui é útil saber como remover delimitadores específicos e mostrar as palavras em uma linha em uma posição especificada. Uma das ferramentas que podem ser usadas para isso é o <code>cut</code>. Portanto, usamos a opção "-d" e definimos o delimitador para o caractere de dois pontos (:) e defina com a opção "-f" a posição na linha que queremos produzir.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux43.png">
+<img src="./imagens/linux43.png">
 
 **Tr**
 
 Outra possibilidade de substituir certos caracteres de uma linha por caracteres definidos por nós é a ferramenta <code>tr</code>. Como primeira opção, definimos qual caractere queremos substituir e, como segunda opção, definimos o personagem pelo qual queremos substituí-lo. No próximo exemplo, substituímos o caractere de dois pontos por espaço.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux44.png">
+<img src="./imagens/linux44.png">
 
 **Colum**
 
 Como esses resultados geralmente podem ter uma representação pouco clara, <code>column</code> é a ferramenta adequada para exibir esses resultados em forma de tabela usando o "-t".
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux45.png">
+<img src="./imagens/linux45.png">
 
 **Awk**
 
 Como podemos ter notado, o usuário "postgres" tem uma linha a mais. Para manter o mais simples possível classificar esses resultados, a programação (g)awk é benéfica, o que nos permite exibir o primeiro (1) e o último ($NF) resultado da linha.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux46.png">
+<img src="./imagens/linux46.png">
 
 **Sed**
 
@@ -555,13 +555,13 @@ Haverá momentos em que desejaremos alterar nomes específicos em todo o arquivo
 
 A bandeira "s" no início representa o comando substituto. Em seguida, especificamos o padrão que queremos substituir. Após a barra (/), entramos no padrão que queremos usar como substituto na terceira posição. Finalmente, usamos a bandeira "g", que significa substituir todas as partidas.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux47.png">
+<img src="./imagens/linux47.png">
 
 **Wc**
 
 Por último, mas não menos importante, muitas vezes será útil saber quantas partidas bem-sucedidas temos. Para evitar contar as linhas ou caracteres manualmente, podemos usar a ferramenta wc. Com a opção "-l", especificamos que apenas as linhas são contadas.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux48.png">
+<img src="./imagens/linux48.png">
 
 ## Gerenciamento de Permissôes
 
@@ -573,25 +573,25 @@ No Linux, as permissões são atribuídas a usuários e grupos. Cada usuário po
 
 As permissões podem ser definidas para o proprietário, grupo e outros, conforme apresentado no próximo exemplo com suas permissões correspondentes.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux49.png">
+<img src="./imagens/linux49.png">
 
 **Alterar permissões**
 
 Podemos modificar as permissões usando o comando <code>chmod</code>, referências de grupo de permissões (u - proprietário, g - Grupo, o - outros, a - Todos os usuários) e um [+] ou um [-] para adicionar remover as permissões designadas. No exemplo a seguir, um usuário cria um novo script de shell de propriedade desse usuário, não executável, e definido com permissões de leitura/gravação para todos os usuários.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux50.png">
+<img src="./imagens/linux50.png">
 
 Podemos então aplicar permissões de leitura para todos os usuários e ver o resultado.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux51.png">
+<img src="./imagens/linux51.png">
 
 Também podemos definir as permissões para que todos os outros usuários leiam somente usando a atribuição de valor octal.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux52.png">
+<img src="./imagens/linux52.png">
 
 Vejamos todas as representações associadas a ele para entender melhor como a atribuição de permissão é calculada.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux53.png">
+<img src="./imagens/linux53.png">
 
 Se somarmos os bits definidos da Representação Binária atribuídos aos valores da Notação Binária juntos, obteremos o Valor Octal. A Representação de Permissão representa os bits definidos na Representação Binária usando os três caracteres, que só reconhece as permissões definidas mais facilmente.
 
@@ -599,11 +599,11 @@ Se somarmos os bits definidos da Representação Binária atribuídos aos valore
 
 Para alterar o proprietário e/ou as atribuições de grupo de um arquivo ou diretório, podemos usar o comando chown. A sintaxe é a seguinte:
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux54.png">
+<img src="./imagens/linux54.png">
 
 Neste exemplo, "shell" pode ser substituído por qualquer arquivo ou pasta arbitrária.
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux55.png">
+<img src="./imagens/linux55.png">
 
 ## Atalhos
 
@@ -671,7 +671,7 @@ Existem muitos atalhos que podemos usar para tornar o trabalho com Linux mais f�
 
 Todos os sistemas informáticos têm um risco inerente de intrusão. Alguns apresentam mais risco do que outros, como um servidor da Web voltado para a Internet que hospeda vários aplicativos da Web complexos. Os sistemas Linux também são menos propensos a vírus que afetam os sistemas operacionais Windows e não apresentam uma superfície de ataque tão grande quanto os hosts ingressados no domínio do Active Directory. Independentemente disso, é essencial ter certos fundamentos para proteger qualquer sistema Linux. Uma das medidas de segurança mais importantes dos sistemas operacionais Linux é manter o sistema operacional e os pacotes instalados atualizados. Isso pode ser conseguido com um comando como:
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux56.png">
+<img src="./imagens/linux56.png">
 
 Se as regras de firewall não forem definidas adequadamente no nível da rede, podemos usar o firewall do Linux e/ou iptables para restringir o tráfego de entrada/saída do host.
 
