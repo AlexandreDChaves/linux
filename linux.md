@@ -49,7 +49,7 @@ Padrão (ESF). O Linux é estruturado com os seguintes diretórios padrão de n�
 
 [FileSystem Hierarchy](https://www.pathname.com/fhs/)
 
-<img src="/home/alexandre/Área de Trabalho/linux/imagens/linux_filesystem.png">
+<img src="./imagens/linux_filesystem.png">
 
 <p>/: O diretório de nível superior é o sistema de arquivos raiz e contém todos os arquivos necessários para inicializar o sistema operacional antes que outros sistemas de arquivos sejam montados, bem como os arquivos necessários para inicializar os outros sistemas de arquivos. Após a inicialização, todos os outros sistemas de arquivos são montados em pontos de montagem padrão como subdiretórios da raiz.
 
