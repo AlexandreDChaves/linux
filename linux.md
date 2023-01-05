@@ -329,7 +329,7 @@ A diferença entre eles está no tratamento dos processos anteriores e depende s
 </p>
 <img src="./imagens/linux16.png">
 
-## Nabegação
+## Navegação
 <p>Uma das melhores maneiras de aprender algo novo é experimentá-lo. Aqui abordamos as seções sobre como navegar pelo Linux, criar, mover, editar e excluir arquivos e pastas, encontrá-los no sistema operacional, diferentes tipos de redirecionamentos e quais são os descritores de arquivos. Em seguida, encontraremos alguns atalhos que facilitarão nosso trabalho com o shell. Comecemos pela navegação. Antes de nos movermos pelo sistema, temos que descobrir em qual diretório estamos. Podemos descobrir onde estamos com o comando <code>pwd</code>
 
 Somente o comando <code>ls</code>  é necessário para a navegação. Ele tem muitas opções adicionais que podem complementar a exibição do conteúdo.
@@ -357,30 +357,47 @@ Em seguida, vamos trabalhar com arquivos e diretórios e aprender a criar, renom
 mkdir diretório.
 
 Cria um arquivo vazio
+
 <img src="./imagens/linux17.png">
+
 Criar um diretório
+
 <img src="./imagens/linux18.png">
+
 Podemos querer ter diretórios específicos no diretório, e seria muito demorado criar esse comando para cada diretório. O comando mkdir tem uma opção marcada -p para adicionar diretórios pai.
+
 <img src="./imagens/linux19.png">
+
 Podemos examinar toda a estrutura depois de criar os diretórios pai com o comando <code>tree</code>.
+
 <img src="./imagens/linux20.png">
+
 Com o comando <code>mv</code> , podemos mover e também renomear arquivos e diretórios. A sintaxe para isso tem esta aparência:
+
 <img src="./imagens/linux21.png">
+
 Primeiro, vamos renomear as informações do arquivo.txt para informações.txt e, em seguida, movê-lo para o diretório Storage.
+
 <img src="./imagens/linux22.png">
+
 Agora vamos criar um arquivo chamado readme.txt no diretório atual e, em seguida, copiar as informações dos arquivos.txt e leiame.txt para o diretório Storage/.
 <code>Touch</code> readme.txt
 
 Mover arquivos para um diretório específico
+
 <img src="./imagens/linux23.png">
+
 Copiar readme.txt
+
 <img src="./imagens/linux24.png"></p>
 
 ## Editando Arquivos
 <p>Há várias maneiras de editar um arquivo. Um dos editores de texto mais comuns para isso é Vi e Vim. Mais raramente, há o editor Nano. Vamos primeiro lidar com o editor Nano aqui, pois é um pouco mais fácil de entender. Podemos criar um novo arquivo diretamente com o editor Nano, especificando o nome do arquivo diretamente como o primeiro parâmetro. Nesse caso, criamos um novo arquivo chamado notes.txt
 
 Exemplo: <code>nano</code> notes.txt
+
 <img src="./imagens/linux25.png">
+
 Acima vemos duas linhas com breves descrições. O acento circunflexo (^) significa a nossa tecla "[CTRL]". Por exemplo, se pressionarmos [CTRL + W], uma linha "Pesquisar:" aparecerá na parte inferior do editor, onde podemos inserir a palavra ou palavras que estamos procurando. Se agora procurarmos a palavra "nós" e pressionarmos [ENTER], o cursor se moverá para a primeira palavra que corresponder.
 
 Para saltar para a próxima partida com o cursor, pressionamos [CTRL + W] novamente e confirmamos com [ENTER] sem nenhuma informação adicional.
@@ -394,13 +411,17 @@ Depois de salvar o arquivo, podemos deixar o editor com [CTRL + X].</p>
 
 **Wich**
 Uma das ferramentas comuns é which. Essa ferramenta retorna o caminho para o arquivo ou link que deve ser executado. Isso nos permite determinar se programas específicos, como cURL, netcat, wget, python, gcc, estão disponíveis no sistema operacional. Vamos usá-lo para procurar Python em nossa instância interativa.
+
 <img src="./imagens/linux26.png">
+
 Se o programa que pesquisamos não existir, nenhum resultado será exibido.
 
 **Find**
 Outra ferramenta útil é find. Além da função para localizar arquivos e pastas, esta ferramenta também contém a função para filtrar os resultados. Podemos usar parâmetros de filtro como o tamanho do arquivo ou a data. Também podemos especificar se pesquisamos apenas arquivos ou pastas.
 Vejamos um exemplo de como seria tal comando com várias opções.
+
 <img src="./imagens/linux27.png">
+
 <code>-type f</code> Assim, definimos o tipo do objeto pesquisado. Neste caso, 'f' significa 'arquivo'.
 
 <code>-name *.conf Com '-name'</code> indicamos o nome do arquivo que estamos procurando. O asterisco (*) significa 'todos' os arquivos com a extensão '.conf'.
@@ -563,7 +584,7 @@ Por último, mas não menos importante, muitas vezes será útil saber quantas p
 
 <img src="./imagens/linux48.png">
 
-## Gerenciamento de Permissôes
+## Gerenciamento de Permissões
 
 No Linux, as permissões são atribuídas a usuários e grupos. Cada usuário pode ser membro de grupos diferentes, e a associação a esses grupos dá ao usuário permissões adicionais específicas. Cada arquivo e diretório pertence a um usuário específico e a um grupo específico. Portanto, as permissões para usuários e grupos que definiram um arquivo também são definidas para os respectivos proprietários. Quando criamos novos arquivos ou diretórios, eles pertencem ao grupo ao qual pertencemos e a nós. Todo o sistema de permissões em sistemas Linux é baseado no sistema de números octais e, basicamente, existem três tipos diferentes de permissões que um arquivo ou diretório pode ser atribuído:
 
